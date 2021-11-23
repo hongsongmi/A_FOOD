@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+            .position{
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+                font-size:20px;
+                justify-content:center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body class="position">
+        <h1>지역골라보이송~~</h1>
+        <script>
+            var ereas=['경상남도','경상북도','전라남도', '전라북도','경기도','강원도'];
+
+        </script>
+        <h2>AREAS</h2>
+        <ul>
+            <script>
+                var i =0;
+                while(i<ereas.length){
+
+                    document.write('<li><input type="button" value="'+ereas[i]+'"></li>');
+                    i=i+1;
+                    
+                }
+            </script>
+
+        </ul>
+
+    </body>
+</html>
