@@ -4,137 +4,75 @@
         <meta charset="utf-8" />
         <title></title>
         <style>
-
-            .jemock{
-                border:2px solid black;
-                width:100%;
-            }
-            .jemock2{
-                width:100%-2px;
-                padding: 20px;
-                background-color:#D4D4C7;
-                color:black;
-                font-size: 30px;
-                text-align: center;
-            }
-
-            #positoin{
-                position:relative;
-                left:10%;
-                top: 40%;
-            }
-            
-            td{position: relative; border:3px solid black; width: 350px; height: 200px; text-align: center; color: black;}
-            th{position: relative; border:3px solid black; width:100px; height: 50px; background-color: #E8E8DB; color: black;}
-
-           .size1{border:3px solid; width: 30%; color: black; text-align: center; background-color: white;}
-           .size2{border:3px solid; width: 100%; height: 100%; color: black; text-align: center; 
-            background-color: #ACAC9F; font-size: 20px;}
-           
-            .box{
-                
-                position: absolute; left: 5%; right: 5%; top: 17%;
-            }
-
+            td{position: relative; border:3px solid black; width: 100px; height: 200px; text-align: center; color: black;}
+            th{position: relative; border:3px solid black; width:350px; height: 50px; color: black;}
             table{position: absolute; left: 8%; right: 67%; top: 33%; }
-            #position{position: absolute; left: 36%; right:39%; top: 33%;}
-            #position1{position: absolute; left: 64%; right: 11%; top: 33%;}
-            .tcolor{background-color: #E8E8DB;}
-            .imgposition{
-                position: absolute;right: 3%; left: 92%; top: 50%;border: 0px; background-color: white;}
-
-        
         </style>
+
+        <link rel="stylesheet" href="./style.css">      
     </head>
     <body>
         <div class="jemock">
-            <div class="jemock2">음식점 추천</div>
+            <div class="jemock2" id="dan_jemock">음식점 추천</div>
         </div>
         <button type="button" class="imgposition"><img src="./화살표.png" alt="화살표" width="100%" height="100%"></button>
 
-        <table class="box"> 
-            
-            
-                
+        <table class="infobox">  
             <tr>
-                <th class="size1">(지역)</th>
+                <th class="dan_info">지역</th>
                 <th><input type="button"  value="지역▼" class="size2" ></th>
-                <th  class="size1">(시간)</th>
+                <th  class="dan_info">시간</th>
                 <th><input type="button" value="시간▼" class="size2" ></th>
-                <th class="size1">단체모임</th>
-                <th><input type="button" value="MODE▼" class="size2" onClick="location.href='모드 선택.html'"></th>
+                <th class="dan_info">mode</th>
+                <th>        
+                    <select  class="size2" value="SNS" id="list">
+                    <option>가성비</option>
+                    <option>날씨흐린 날</option>
+                    <option>단체모임</option>
+                    <option>데이트</option>
+                    <option>이색적</option>
+                    <option>LOCAL</option>
+                    <OPtion>SNS</OPtion>
+                     </select>
+                </th>
             </tr>
-         
         </table>
 
       
-  
+        <table>
+            <thead>
+                <tr><th id="dan_sangho">상호명</th></tr>
+             </thead>
+            <tfoot>
+                <tr><td class="dan_reviewcolor">리뷰</td></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>사진</td></tr>
+            </tbody>
+        </table>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>상호명</th> 
-                    </tr>
-                </thead>
-                
-                <tfoot>
-                    <tr>
-                        <td class="tcolor">리뷰</td>  
-                </tr>
-                </tfoot>
+         <table id="position">
+            <thead>
+                <tr><th id="dan_sangho">상호명</th> </tr>
+            </thead>
+            <tfoot>
+                <tr><td class="dan_reviewcolor">리뷰</td></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>사진</td></tr>
+            </tbody>
+        </table>
 
-                <tbody>
-                <tr>
-                        <td>사진</td>
-                    </tr>
-                </tbody>
+        <table id="position1">
+            <thead>
+                <tr><th id="dan_sangho">상호명</th> </tr>
+            </thead>
+            <tfoot>
+                <tr><td class="dan_reviewcolor">리뷰</td></tr>
+            </tfoot>
+            <tbody>
+                <tr><td>사진</td></tr></tbody>
             </table>
-
-            <table id="position">
-                <thead>
-                    <tr>
-                        <th>상호명</th> 
-                    </tr>
-                </thead>
-                
-                <tfoot>
-                    <tr>
-                        <td class="tcolor">리뷰</td>  
-                </tr>
-                </tfoot>
-
-                <tbody>
-                <tr>
-                        <td>사진</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table id="position1">
-                <thead>
-                    <tr>
-                        <th>상호명</th> 
-                    </tr>
-                </thead>
-                
-                <tfoot>
-                    <tr>
-                        <td class="tcolor">리뷰</td>  
-                </tr>
-                </tfoot>
-
-                <tbody>
-                <tr>
-                        <td>사진</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-   
-        
-       
-
-
 
     </body>
 </html>

@@ -4,36 +4,190 @@
         <meta charset="utf-8" />
         <title></title>
         <style>
-            .position{
-                position: absolute;
-                left:50%;
-                top:50%;
-                transform: translate(-50%,-50%);
-                font-size:20px;
-                justify-content:center;
-                align-items: center;
+            select {text-align-last: center;
+                    text-align: center;
+                    -ms-text-align-last: center;
+                    -moz-text-align-last: center;
             }
         </style>
+
+        <link rel="stylesheet" href="./style.css">
+              
     </head>
-    <body class="position">
-        <h1>지역골라보이송~~</h1>
+    <body>
+        <div class="jemock">
+            <div class="jemock2" id="region_jemock">지역 선택</div>
+        </div>
+        <div class="region_box"></div>
+        <div class="region_style">
+            <span><select id="food_parent" onchange="loadFoodChild();" style="height: 75px; width: 200px; font-size: 2vw;"></select></span>
+            <span><select id="food_child" onchange="loadFoodBaby();" style="height: 75px; width: 200px; font-size: 2vw;"></select></span>
+            <span><select id="food_baby" style="height: 75px; width: 200px; font-size: 2vw;"></select></span>
+        </div>
+        
+
         <script>
-            var ereas=['경상남도','경상북도','전라남도', '전라북도','경기도','강원도'];
+            let food_parent = [
+                {v:"", t:""},
+                {v:"1", t:"서울"},
+                {v:"2", t:"부산"},
+                {v:"3", t:"대구"},
+                {v:"4", t:"인천"},
+                {v:"5", t:"광주"},
+                {v:"6", t:"대전"},
+                {v:"7", t:"울산"},
+                {v:"8", t:"세종"},
+                {v:"9", t:"경기"},
+                {v:"10", t:"경남"},
+                {v:"11", t:"경북"},
+                {v:"12", t:"충남"},
+                {v:"13", t:"충북"},
+                {v:"14", t:"전남"},
+                {v:"15", t:"전북"},
+                {v:"16", t:"강원"},
+                {v:"17", t:"제주"}
+                
+            ];
 
-        </script>
-        <h2>AREAS</h2>
-        <ul>
-            <script>
-                var i =0;
-                while(i<ereas.length){
+            let food_child_1=[
+                {v:"", t:""},
+                {v:"1", t:"강남구"},
+                {v:"2", t:"강동구"},
+                {v:"3", t:"강북구"},
+                {v:"4", t:"강서구"},
+                {v:"5", t:"관악구"},
+                {v:"6", t:"광진구"},
+                {v:"7", t:"구로구"},
+                {v:"8", t:"금천구"},
+                {v:"9", t:"노원구"},
+                {v:"10", t:"도봉구"},
+                {v:"11", t:"동대문구"},
+                {v:"12", t:"동작구"},
+                {v:"13", t:"마포구"},
+                {v:"14", t:"서대문구"},
+                {v:"15", t:"서초구"},
+                {v:"16", t:"성동구"},
+                {v:"17", t:"성북구"},
+                {v:"18", t:"송파구"},
+                {v:"19", t:"양천구"},
+                {v:"20", t:"영등포구"},
+                {v:"21", t:"용산구"},
+                {v:"22", t:"은평구"},
+                {v:"23", t:"종로구"},
+                {v:"24", t:"중구"},
+                {v:"25", t:"중랑구"}
+      
 
-                    document.write('<li><input type="button" value="'+ereas[i]+'"></li>');
-                    i=i+1;
-                    
+            ];
+
+            let food_child_2=[
+                 {v:"", t:""},
+                {v:"1", t:"강서구"},
+                {v:"2", t:"금정구"},
+                {v:"3", t:"기장군"},
+                {v:"4", t:"남구"},
+                {v:"5", t:"동구"},
+                {v:"6", t:"동래구"},
+                {v:"7", t:"부산진구"},
+                {v:"8", t:"북구"},
+                {v:"9", t:"사상구"},
+                {v:"10", t:"사하구"},
+                {v:"11", t:"서구구"},
+                {v:"12", t:"수영구"},
+                {v:"13", t:"연제구"},
+                {v:"14", t:"영도구"},
+                {v:"15", t:"중구"},
+                {v:"16", t:"해운대구"}
+            
+            ];
+
+            let food_child_3=[
+                {v:"1", t:"파스타"},
+                {v:"2", t:"리조또"},
+                {v:"3", t:"크림"}
+            ];
+
+
+            let food_baby_1=[
+                {v:"1", t:"a"},
+                {v:"2", t:"b"},
+                {v:"3", t:"c"}
+            ];
+            let food_baby_2=[
+                {v:"1", t:"d"},
+                {v:"2", t:"f"},
+                {v:"3", t:"g"}
+            ];
+            let food_baby_3=[
+                {v:"1", t:"h"},
+                {v:"2", t:"i"},
+                {v:"3", t:"j"}
+            ];
+
+
+
+            function loadFoodParent(){
+                let h=[];
+                food_parent.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>')
+                });
+
+                document.getElementById("food_parent").innerHTML=h.join("");
+                
+            }
+
+
+            function loadFoodChild(){
+                let parent_food=document.getElementById("food_parent").value;
+                let h=[];
+                if(parent_food==""){}
+                else{
+                    if(parent_food=="1"){food_child_1.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
+                    else if(parent_food=="2"){food_child_2.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
+                    else if(parent_food=="3"){food_child_3.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
                 }
-            </script>
+                document.getElementById("food_child").innerHTML=h.join("");
 
-        </ul>
+            }
 
+
+
+            function loadFoodBaby()
+            {
+                let child_food=document.getElementById("food_child").value;
+                let h=[];
+                if(child_food==""){}
+                else{
+                    if(child_food=="1"){food_baby_1.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
+                    else if(child_food=="2"){food_baby_2.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
+                    else if(child_food=="3"){food_baby_3.forEach(item =>{
+                    h.push('<option value="' + item.v +'">'+ item.t+ '</option>');
+                    });}
+                }
+
+
+                     
+
+                     document.getElementById("food_baby").innerHTML=h.join("");
+                }
+
+            loadFoodParent();
+            
+            
+            
+            
+        </script>
+        
+        <a href="./이동시간.html"><input type="button" class="button" value="선택완료"></a>
     </body>
 </html>

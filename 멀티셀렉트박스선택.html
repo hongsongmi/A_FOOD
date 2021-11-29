@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <select id="food_parent" onchange="loadFoodChild();"></select>
+    <select id="food_child" onchange="loadFoodBaby();"></select>
+
+
+    <script>
+        let food_parent = [
+            { v: "1", t: "서울" },
+            { v: "2", t: "부산" },
+            { v: "3", t: "대구" },
+        ];
+
+        let food_child_1 = [
+            { v: "1", t: "강남구" },
+            { v: "2", t: "강동구" },
+            { v: "3", t: "강북구" }
+        ];
+
+        let food_child_2 = [
+            { v: "", t: "" },
+            { v: "1", t: "강서구" },
+            { v: "2", t: "금정구" },
+            { v: "3", t: "기장군" },
+        ];
+
+        function loadFoodParent() {
+            let h = [];
+            food_parent.forEach(item => {
+                h.push('<option value="' + item.v + '">' + item.t + '</option>')
+            });
+
+            document.getElementById("food_parent").innerHTML = h.join("");
+        }
+
+
+        function loadFoodChild() {
+            let parent_food = document.getElementById("food_parent").value;
+            let h = [];
+            if (parent_food == "") { }
+            else {
+                if (parent_food == "1") {
+                    food_child_1.forEach(item => {
+                        h.push('<option value="' + item.v + '">' + item.t + '</option>');
+                    });
+                }
+                else if (parent_food == "2") {
+                    food_child_2.forEach(item => {
+                        h.push('<option value="' + item.v + '">' + item.t + '</option>');
+                    });
+                }
+                else if (parent_food == "3") {
+                    food_child_3.forEach(item => {
+                        h.push('<option value="' + item.v + '">' + item.t + '</option>');
+                    });
+                }
+            }
+            document.getElementById("food_child").innerHTML = h.join("");
+
+        }
+        loadFoodParent();
+    </script>
+
+</body>
+
+</html>
