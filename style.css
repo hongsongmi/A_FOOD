@@ -56,15 +56,15 @@
            
 .infobox{ position: absolute; left: 5%; right: 5%; top: 17%;}
 
-#position{position: absolute; left: 36%; right:39%; top: 33%;}
-#position1{position: absolute; left: 64%; right: 11%; top: 33%;}
+#position{position: absolute; left: 36%; right:39%; top: 28%;}
+#position1{position: absolute; left: 64%; right: 11%; top: 28%;}
 
 .imgposition{ position: absolute;right: 3%; left: 92%; top: 50%;border: 0px; background-color: white;}
 
 
 td{position: relative; border:3px solid black; width: 100px; height: 200px; text-align: center; color: black;}
 th{position: relative; border:3px solid black; width:350px; height: 50px; color: black;}
-table{position: absolute; left: 8%; right: 67%; top: 33%; }
+table{position: absolute; left: 8%; right: 67%; top: 28%; }
 
 
 
@@ -114,83 +114,13 @@ table{position: absolute; left: 8%; right: 67%; top: 33%; }
 
 
 /* 이동시간 */
-#time_color{background-color: #F6BBBD;}
-
-.time_button {
-    border: 3px solid black;
-    color: black;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    background-color:RGBA(227,215,234,0.6);
-    position: absolute;
-    left: 80%;
-    top: 85%;
-    width: 250px;
-    font-size: 16px;
-}
 
 
-.time_button:hover{background-color: rgb(185, 66, 185); color: white;}
 
-#region{
-    background-color:#E3D7EA;
-    position: absolute;
-    left: 27%;
-    top: 17%;
-    width: 700px;
-    height: 80px;
-    font-size: 25px;
-}
-
-
-/* 이동시간 */
-th1{ border:3px solid; width: 100px; height: 150px; font-size: 2vw;}
-tr1{position: absolute; left: 17%; top: 40%; text-align: center;}
-
-.time{width:300px;}
-
-
-.buttonstyle{
-    color: black;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 0px;
-    cursor: pointer;
-    background-color: rgb(222,190,220);
-    width: 100px;
-    font-size: 30px;
-    height: 75px;
-}
-
-.transportation {
-    border: 3px solid black;
-    color: black;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    background-color: #F19CA3;
-    font-size: 20px;
-    width: 180px;
-}
-
-.transportation:hover{background-color: #BF6A71;}
-
-#t1{ position: absolute; left: 17%; top: 70%}
-#t2{ position: absolute; left: 44%; top: 70%}
-#t3{ position: absolute; left: 74%; top: 70%}
 
 
 /* 지역선택 */
-#region_jemock{background-color: bisque;}
+#region_jemock{background-color: #F2DCDB;}
 .region_style{position: absolute; left: 30%; top: 40%;}
-.region_box{position: absolute; left: 28.5%; top: 38.5%; height: 100px; width: 650px; background-color: coral;}
+.region_box{position: absolute; left: 28.5%; top: 38.5%; height: 100px; width: 650px; background-color:#D99694
+        ;}

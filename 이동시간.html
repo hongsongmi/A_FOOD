@@ -4,45 +4,49 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="./style.css">
-    </style>
+    
+    <link rel="stylesheet" href="./time.css">
+   
+    
 </head>
 
 <body>
     <div class="jemock">
         <div class="jemock2" id="time_color">최대 이동시간을 선택하세요.</div>
     </div>
-    <a href="./모드 선택.html"><input type="button" class="time_button" value="선택완료"></a>
+    <input type="text" class="time_button" id="region" value="지역">
+    
     <input type="button" class="transportation" id="t1" value="자동차"
         onclick="this.style.color='#BF6A71'; this.style.background='purple'; this.style.cursor='hand';">
     <input type="button" class="transportation" id="t2" value="대중교통"
         onclick="this.style.color='#BF6A71'; this.style.background='purple'; this.style.cursor='hand';">
     <input type="button" class="transportation" id="t3" value="도보"
         onclick="this.style.color='#BF6A71'; this.style.background='purple'; this.style.cursor='hand';">
-    <input type="text" class="time_button" id="region" value="(지역)">
+    
+    <a href="./모드 선택.html"><input type="button" class="time_button" value="선택완료"></a>
 
     <table>
-        <tr1 class="tr">
-            <th1 class="time">
+        <tr class="tr">
+            <th class="time">
                 <div id='result'>0</div>
-            </th1>
-            <th1 class>시간</th1>
-            <th1>
+            </th>
+            <th class>시간</th>
+            <th>
                 <input type='button' class="buttonstyle" onclick='count("plus")' value='▲' />
                 <br>
                 <input type='button' class="buttonstyle" onclick='count("minus")' value='▼' />
-            </th1>
+            </th>
 
-            <th1 class="time">
+            <th class="time">
                 <div id='result2'>0</div>
-            </th1>
-            <th1 class>분</th>
-            <th1>
+            </th>
+            <th class>분</th>
+            <th>
                 <input type='button' class="buttonstyle" onclick='count("plus2")' value='▲' />
                 <br>
                 <input type="button" class="buttonstyle" onclick='count("minus2")' value="▼">
-            </th1>
-        </tr1>
+            </th>
+        </tr>
     </table>
 
 
